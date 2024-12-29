@@ -37,12 +37,12 @@ const Navbar = () => {
   return (
     <div className='bg-white dark:bg-[#222831] dark:text-white'>
       <div className='flex items-center justify-between mx-auto max-w-7xl h-16'>
-        <div>
+        <Link to={"/"}>
           <h1 className='text-2xl font-bold'>
             Job
             <span className='text-[#6A38C2] dark:text-[#FFD369]'>Portal</span>
           </h1>
-        </div>
+        </Link>
         <div className='flex items-center gap-12'>
           <ul className='flex font-medium items-center gap-5'>
             {user && user.role === "recruiter" ? (
@@ -53,7 +53,7 @@ const Navbar = () => {
                 <li>
                   <Link to='/admin/jobs'>Jobs</Link>
                 </li>
-                <li>
+                <li className='cursor-pointer'>
                   {mode ? (
                     <Moon onClick={HandleDarkMode} />
                   ) : (
@@ -72,7 +72,7 @@ const Navbar = () => {
                 <li>
                   <Link to='/browse'>Browse</Link>
                 </li>
-                <li>
+                <li className='cursor-pointer'>
                   {mode ? (
                     <Moon onClick={HandleDarkMode} />
                   ) : (

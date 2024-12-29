@@ -17,9 +17,9 @@ const Job = ({ job }) => {
   };
 
   return (
-    <div className='p-5 rounded-md shadow-xl bg-white border border-gray-100'>
+    <div className='p-5 rounded-md shadow-xl bg-white border border-gray-100 dark:bg-[#393E46] dark:text-white'>
       <div className='flex items-center justify-between'>
-        <p className='text-sm text-gray-500'>
+        <p className='text-sm text-gray-500 dark:text-gray-200'>
           {daysAgoFunction(job?.createdAt) === 0
             ? "Today"
             : `${daysAgoFunction(job?.createdAt)} days ago`}
@@ -37,22 +37,36 @@ const Job = ({ job }) => {
         </Button>
         <div>
           <h1 className='font-medium text-lg'>{job?.company?.name}</h1>
-          <p className='text-sm text-gray-500'>India</p>
+          <p className='text-sm text-gray-500 dark:text-gray-300'>India</p>
         </div>
       </div>
 
       <div>
         <h1 className='font-bold text-lg my-2'>{job?.title}</h1>
-        <p className='text-sm text-gray-600'>{job?.description}</p>
+        <p className='text-sm text-gray-600 dark:text-gray-400'>
+          {job?.description}
+        </p>
       </div>
       <div className='flex items-center gap-2 mt-4'>
-        <Badge className={"text-blue-700 font-bold"} variant='ghost'>
+        <Badge
+          className={
+            "text-blue-700 font-bold dark:bg-[#222831] dark:text-[#3DC2EC]"
+          }
+          variant='ghost'>
           {job?.position} Positions
         </Badge>
-        <Badge className={"text-[#F83002] font-bold"} variant='ghost'>
+        <Badge
+          className={
+            "text-[#F83002] font-bold dark:bg-[#222831] dark:text-[#E80F88]"
+          }
+          variant='ghost'>
           {job?.jobType}
         </Badge>
-        <Badge className={"text-[#7209b7] font-bold"} variant='ghost'>
+        <Badge
+          className={
+            "text-[#7209b7] font-bold dark:bg-[#222831] dark:text-[#9290C3]"
+          }
+          variant='ghost'>
           {job?.salary}LPA
         </Badge>
       </div>
@@ -62,7 +76,9 @@ const Job = ({ job }) => {
           variant='outline'>
           Details
         </Button>
-        <Button className='bg-[#7209b7]'>Save For Later</Button>
+        <Button className='bg-[#7209b7] dark:bg-[#77ABB7] dark:text-gray-900'>
+          Save For Later
+        </Button>
       </div>
     </div>
   );

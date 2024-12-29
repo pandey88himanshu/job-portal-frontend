@@ -27,9 +27,9 @@ const Jobs = () => {
   }, [allJobs, searchedQuery]);
 
   return (
-    <div>
+    <div className='dark:bg-[#222831]'>
       <Navbar />
-      <div className='max-w-7xl mx-auto mt-5'>
+      <div className='max-w-7xl mx-auto mt-5 dark:bg-[#222831]'>
         <div className='flex gap-5'>
           <div className='w-20%'>
             <FilterCard />

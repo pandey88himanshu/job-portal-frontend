@@ -19,8 +19,8 @@ const Browse = () => {
   return (
     <div>
       <Navbar />
-      <div className='max-w-7xl mx-auto my-10'>
-        <h1 className='font-bold text-xl my-10'>
+      <div className='w-full mx-auto h-screen px-10 dark:bg-[#222831] dark:text-white'>
+        <h1 className='font-bold text-xl py-6 '>
           Search Results ({allJobs.length})
         </h1>
         <div className='grid grid-cols-3 gap-4'>
