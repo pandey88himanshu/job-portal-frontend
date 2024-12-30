@@ -37,7 +37,7 @@ const CompanyCreate = () => {
     }
   };
   return (
-    <div>
+    <div className='dark:bg-[#222831] dark:text-white h-screen'>
       <Navbar />
       <div className='max-w-4xl mx-auto'>
         <div className='my-10'>
@@ -61,7 +61,9 @@ const CompanyCreate = () => {
             onClick={() => navigate("/admin/companies")}>
             Cancel
           </Button>
-          <Button onClick={registerNewCompany}>Continue</Button>
+          <Button onClick={registerNewCompany} className='dark:bg-[#FFD369]'>
+            Continue
+          </Button>
         </div>
       </div>
     </div>

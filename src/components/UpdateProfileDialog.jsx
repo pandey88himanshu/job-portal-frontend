@@ -72,16 +72,16 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
     setInput({ ...input, file });
   };
   return (
-    <div>
+    <div className=''>
       <Dialog open={open}>
         <DialogContent
-          className='sm:max-w-[425px]'
+          className='sm:max-w-[425px] '
           onInteractOutside={() => setOpen(false)}>
           <DialogHeader>
             <DialogTitle>Update Profile</DialogTitle>
           </DialogHeader>
           <form onSubmit={submitHandler}>
-            <div className='grid gap-4 py-4'>
+            <div className='grid gap-4 py-4 dark:bg-[#222831]'>
               <div className='grid grid-cols-4 items-center gap-4'>
                 <Label htmlFor='name' className='text-right'>
                   Name
@@ -160,12 +160,12 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
             </div>
             <DialogFooter>
               {loading ? (
-                <Button className='w-full my-4'>
+                <Button className='w-full my-4 dark:bg-[#FFD369]'>
                   {" "}
                   <Loader2 className='mr-2 h-4 w-4 animate-spin' /> Please wait{" "}
                 </Button>
               ) : (
-                <Button type='submit' className='w-full my-4'>
+                <Button type='submit' className='w-full my-4 dark:bg-[#FFD369]'>
                   Update
                 </Button>
               )}

@@ -18,7 +18,7 @@ const Companies = () => {
     dispatch(setSearchCompanyByText(input));
   }, [input]);
   return (
-    <div>
+    <div className='dark:bg-[#222831] dark:text-white h-screen'>
       <Navbar />
       <div className='max-w-6xl mx-auto my-10'>
         <div className='flex items-center justify-between my-5'>
@@ -27,7 +27,9 @@ const Companies = () => {
             placeholder='Filter by name'
             onChange={(e) => setInput(e.target.value)}
           />
-          <Button onClick={() => navigate("/admin/companies/create")}>
+          <Button
+            onClick={() => navigate("/admin/companies/create")}
+            className={"dark:bg-[#FFD369]"}>
             New Company
           </Button>
         </div>

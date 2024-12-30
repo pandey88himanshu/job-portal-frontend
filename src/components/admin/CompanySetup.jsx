@@ -79,7 +79,7 @@ const CompanySetup = () => {
   }, [singleCompany]);
 
   return (
-    <div>
+    <div className='dark:bg-[#222831] dark:text-white h-screen'>
       <Navbar />
       <div className='max-w-xl mx-auto my-10'>
         <form onSubmit={submitHandler}>
@@ -140,12 +140,12 @@ const CompanySetup = () => {
             </div>
           </div>
           {loading ? (
-            <Button className='w-full my-4'>
+            <Button className='w-full my-4 dark:bg-[#FFD369]'>
               {" "}
               <Loader2 className='mr-2 h-4 w-4 animate-spin' /> Please wait{" "}
             </Button>
           ) : (
-            <Button type='submit' className='w-full my-4'>
+            <Button type='submit' className='w-full my-4 dark:bg-[#FFD369]'>
               Update
             </Button>
           )}

@@ -114,14 +114,14 @@ const Navbar = () => {
                         alt='@shadcn'
                       />
                     </Avatar>
-                    <div>
+                    <div className='dark:bg-[#222831]'>
                       <h4 className='font-medium'>{user?.fullname}</h4>
                       <p className='text-sm text-muted-foreground'>
                         {user?.profile?.bio}
                       </p>
                     </div>
                   </div>
-                  <div className='flex flex-col my-2 text-gray-600'>
+                  <div className='flex flex-col  text-gray-600 '>
                     {user && user.role === "student" && (
                       <div className='flex w-fit items-center gap-2 cursor-pointer'>
                         <User2 />

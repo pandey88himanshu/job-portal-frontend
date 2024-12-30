@@ -54,10 +54,10 @@ const Login = () => {
   return (
     <div>
       <Navbar />
-      <div className='flex items-center justify-center max-w-7xl mx-auto'>
+      <div className='flex items-center justify-center  w-full h-[92vh] mx-auto dark:bg-[#222831] dark:text-white'>
         <form
           onSubmit={submitHandler}
-          className='w-1/2 border border-gray-200 rounded-md p-4 my-10'>
+          className='w-1/2 border border-gray-200 rounded-md p-4 my-10 dark:bg-[#393E46]'>
           <h1 className='font-bold text-xl mb-5'>Login</h1>
           <div className='my-2'>
             <Label>Email</Label>
@@ -107,18 +107,18 @@ const Login = () => {
             </RadioGroup>
           </div>
           {loading ? (
-            <Button className='w-full my-4'>
+            <Button className='w-full my-4 dark:bg-[#FFD369]'>
               {" "}
               <Loader2 className='mr-2 h-4 w-4 animate-spin' /> Please wait{" "}
             </Button>
           ) : (
-            <Button type='submit' className='w-full my-4'>
+            <Button type='submit' className='w-full my-4 dark:bg-[#FFD369]'>
               Login
             </Button>
           )}
           <span className='text-sm'>
             Do not have an account?{" "}
-            <Link to='/signup' className='text-blue-600'>
+            <Link to='/signup' className='text-blue-600 dark:text-blue-400'>
               Signup
             </Link>
           </span>
